@@ -1,0 +1,134 @@
+@import 'general';
+@import 'colors';
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	width: 88%;
+	background-color: $very-pale-blue;
+	border-radius: 2.2em;
+	overflow: hidden;
+	text-align: center;
+	.main-content {
+		padding: 3.5em;
+		padding-top: 0;
+		.main-title {
+			margin: 1.3em 0 1em;
+			font-size: 2.2rem;
+			font-weight: 900;
+			text-transform: capitalize;
+			color: $dark-blue;
+		}
+
+		.description {
+			font-size: 1.5rem;
+			font-weight: 500;
+			line-height: 1.5;
+			color: $desaturated-blue;
+		}
+
+		.plan-card {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin: 4em 0 0em;
+			padding: 0.5em;
+
+			.image-pond {
+				align-self: center;
+			}
+
+			.chosen {
+				display: flex;
+				align-items: center;
+				gap: 2em;
+			}
+
+			.chosen-content {
+				display: flex;
+				flex-direction: column;
+				gap: 0.35em;
+
+				.chosen-title {
+					font-weight: 900;
+					text-transform: capitalize;
+					font-size: 1.4rem;
+				}
+
+				.chosen-desc {
+					font-size: 1.4rem;
+					color: $desaturated-blue;
+				}
+			}
+
+			.change {
+				font-size: 1.3rem;
+				font-weight: bold;
+				text-transform: capitalize;
+				color: $bright-blue;
+				transition: color 0.2s ease-out;
+			}
+
+			.change:hover,
+			.change:focus {
+				color: $custom-bright-blue;
+				text-decoration: none;
+			}
+
+			.change:visited {
+				color: $dark-blue;
+			}
+		}
+	}
+
+	.buttons {
+		padding: 2.4em 2.4em 1.7em;
+		padding-top: 0;
+		display: flex;
+		flex-direction: column;
+		// gap: 1em;
+		button {
+			padding: 1.1em;
+			font-weight: 700;
+			letter-spacing: 0.025em;
+			font-size: 1.5rem;
+			outline: none;
+			border: none;
+			border-radius: 0.8em;
+			cursor: pointer;
+		}
+
+		.pay {
+			background-color: $bright-blue;
+			color: $pale-blue;
+			box-shadow: 0 6px 20px 0 hsla(224, 23%, 55%, 0.74);
+			margin-bottom: 0.8em;
+			transition: background-color 0.2s ease-out;
+			z-index: 1;
+		}
+
+		.pay:hover,
+		.pay:focus {
+			background-color: $custom-bright-blue;
+		}
+
+		.cancel {
+			color: $desaturated-blue;
+			font-size: 1.45rem;
+			transition: color 0.2s ease;
+		}
+
+		.cancel:hover,
+		.cancel:focus {
+			color: $dark-blue;
+		}
+	}
+}
+
+@import 'media470';
